@@ -1,3 +1,6 @@
-Hello this data from local pc
+fasdfHello this data from local pc
+<<<<<<< HEAD
 HEllo this data from github
 
+=======
+>>>>>>> 92e2c6e (data from local)

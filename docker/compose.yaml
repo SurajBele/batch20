@@ -1,0 +1,27 @@
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+
+  tomcat-app:
+    image: surajbele/tomcat:java_base
+    ports:
+      - "8080:8080"
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: secretpassword
+      MYSQL_DATABASE: mydatabase
+    ports:
+      - "3306:3306"
+  
+  httpd-server:
+    image: surajbele/b20:httpd-app
+    ports:
+      - "81:80"
+    volumes:
+      - /data:/usr/local/apache2/htdocs/
+volumes:
+  data:

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod4
+spec:
+  containers:
+    - name: mypod4
+      image: surajbele/b20:httpd-app
+      ports:
+       - containerPort: 80

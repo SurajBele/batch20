@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydeployment
+  labels:
+    app: spider2
+    department: devops
+spec:
+  strategy: 
+   type: RollingUpdate
+   rollingUpdate:
+     maxSurge: 3
+     maxUnavailable: 1
+  replicas: 3
+  selector:
+    matchLabels:
+      myapp: spider2
+      department: devops
+    matchExpressions:
+    - {key: myapp, operator: In, values: [spider2]}
+  template:
+    metadata:
+      labels:
+        myapp: spider2
+        department: devops
+    spec:
+      containers:
+        - name: spider2
+          image: nginx

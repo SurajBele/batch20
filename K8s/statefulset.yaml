@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: my-ss
+  labels:
+    app: my-app3
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app3
+  template:
+    metadata:
+      name: my-pod3
+      labels:
+        app: my-app3
+        env: devops
+    spec:
+      containers:
+        - name: mariadb
+          image: mariadb
+          ports:
+          - name: db
+            containerPort: 3306
+          env:
+          - name: MARIADB_ROOT_PASSWORD
+            valueFrom:
+              configMapKeyRef:
+                 key: password

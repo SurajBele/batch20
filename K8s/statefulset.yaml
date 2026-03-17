@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: my-ss
+  name: myss
   labels:
     app: my-app3
 spec:
@@ -17,13 +17,13 @@ spec:
         env: devops
     spec:
       containers:
-        - name: mariadb
-          image: mariadb
-          ports:
-          - name: db
-            containerPort: 3306
-          env:
-          - name: MARIADB_ROOT_PASSWORD
-            valueFrom:
-              configMapKeyRef:
-                 key: password
+      - name: mariadb
+        image: mariadb
+        ports:
+        - name: db
+          containerPort: 3306
+        env:
+        - name: MARIADB_ROOT_PASSWORD
+          valueFrom:
+           configMapKeyRef:
+              key: password

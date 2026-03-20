@@ -28,3 +28,8 @@ spec:
             secretKeyRef:
               name: my-secrets
               key: password
+        - name: NETFLIX_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: my-secrets
+              key: netflix

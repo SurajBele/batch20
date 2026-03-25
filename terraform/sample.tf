@@ -8,6 +8,7 @@ resource "aws_instance" "myinstance" {
   vpc_security_group_ids = [ "sg-0882b4fee72084654", ]
   tags = {
     name  = "suraj"
+    Name = "myinstance"
     Environment = "dev"
   }
 }

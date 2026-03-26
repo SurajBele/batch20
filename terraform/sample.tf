@@ -6,6 +6,7 @@ resource "aws_instance" "myinstance" {
   instance_type = "t3.micro"
   key_name = "id_rsa"
   vpc_security_group_ids = [ "sg-0882b4fee72084654", ]
+  availability_zone = "ap-south-1a"
   tags = {
     name  = "suraj"
     Name = "myinstance"

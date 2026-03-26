@@ -12,7 +12,7 @@ resource "aws_instance" "myinstance" {
   ami = var.ami_id
   instance_type = var.instance_type_mumbai
   key_name = var.key_name
-  security_groups = var.mysg
+  security_groups = [var.mysg]
   availability_zone = var.az
   tags = {
     name  = "suraj"

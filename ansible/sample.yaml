@@ -3,10 +3,15 @@
   vars:
     animal: "tiger"
   tasks:
-    - name: print tiger
+    - name: print animal1
       debug:
         msg: "hello I am {{animal}}"
-    - name: print tiger2
+    - name: print animal2
+      debug:
+        msg: "hello I am {{animal}}"
+      vars:
+        animal: "lion"
+    - name: print animal3
       debug:
         msg: "hello I am {{animal}}"
 

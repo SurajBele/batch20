@@ -4,6 +4,9 @@
     animal: "tiger"
   vars_files:
     - ./var.txt
+  vars_prompt:
+    - name: animal
+      prompt: "Please enter the animal name:"
   tasks:
     - name: print animal1
       debug:

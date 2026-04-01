@@ -27,3 +27,11 @@ module "my-vpc" {
   pub_subnet_cidr = var.pub_subnet_cidr
   env = var.env
 }
+module "my-vpc2" {
+  source = "/modules/vpc"
+  project = var.project
+  vpc_cidr = var.vpc-cidr2
+  pvt_subnet_cidr = var.pvt_subnet_cidr2
+  pub_subnet_cidr = var.pub_subnet_cidr2
+  env = var.env
+}

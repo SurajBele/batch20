@@ -32,3 +32,13 @@ variable "pvt_subnet_cidr" {
 variable "pub_subnet_cidr" {
   default = "10.0.1.0/24"
 }
+
+variable "vpc-cidr2"{
+    default = "192.168.0.0/16"
+}
+variable "pvt_subnet_cidr2" {
+  default = "192.168.0.0/24"
+}
+variable "pub_subnet_cidr2" {
+  default = "192.168.1.0/24"
+}

@@ -1,0 +1,9 @@
+- name: my 1st playbook
+  hosts: all
+  tasks:
+    - name: print tiger
+      debug:
+        msg: "hello I am tiger"
+    - name: print lion
+      debug:
+        msg: "hello I am lion"

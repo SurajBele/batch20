@@ -20,6 +20,13 @@
     - name: print animal3
       debug:
         msg: "hello I am {{animal}}"
+    - name: get hostname
+      shell: hostname
+      register: URL
+    - name: print hostname
+      debug:
+        msg: "{{URL}}"
+
 
 
 

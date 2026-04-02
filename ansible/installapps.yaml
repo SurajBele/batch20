@@ -1,0 +1,16 @@
+- name: root priviliage
+  hosts: all
+  tasks:
+  - name: install httpd
+    yum:
+      name: httpd
+      state: latest 
+    when: ansible_os_family == "RedHat"
+    
+  - name: install apache2
+    apt:
+      name: apache2
+      update_cache: yes
+      state: present
+    when: ansible_os_family == "Debian"
+    

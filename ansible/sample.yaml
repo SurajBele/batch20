@@ -11,7 +11,8 @@
   tasks:
     - name: print animal1
       debug:
-        msg: "hello I am {{animal}}"
+        msg: "hello I am {{animfagfarg}}"
+      ignore_errors: true
     - name: print animal2
       debug:
         msg: "hello I am {{animal}}"

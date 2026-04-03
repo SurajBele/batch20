@@ -18,8 +18,16 @@
   - name: add line in index.html
     lineinfile:
       path: /var/www/html/index.html
-      regexp: ''
+      regexp: '^</h1>'
       line: '<h1> hello this is new line added </h1>'
+
+  - name: add lines in index.html
+    blockinfile:
+      path: /var/www/html/index.html
+      block: |
+        <h1> hello my name is suraj </h1>
+        <h2> this line 2 </h2>
+        <h3> this is block of lines </h3>
 
   - name: start apache2
     systemd: 

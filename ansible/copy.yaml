@@ -1,0 +1,23 @@
+- name: package modules
+  hosts: all
+  become: true
+  tasks: 
+  - name: install apache2
+    package:
+      name: apache2
+      update_cache: yes
+      state: present
+    when: ansible_os_family == "Debian"
+  
+  - name: copy index.html from local to webserver
+    copy:
+      src: index.html
+      dest: /var/www/html/index.html
+      mode: '0644'
+
+  - name: start apache2
+    systemd: 
+      name: apache2
+      state: restarted
+      enabled: true
+    

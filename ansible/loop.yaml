@@ -3,7 +3,7 @@
   tasks:
     - name: print multipal items
       debug:
-        msg: "{{items}}"
+        msg: "{{item}}"
       loop:
        - hello
        - how are you?

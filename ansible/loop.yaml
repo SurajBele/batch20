@@ -1,0 +1,10 @@
+- name: file to do multipal work/install
+  hosts: all
+  tasks:
+    - name: print multipal items
+      debug:
+        msg: "{{Items}}"
+      loop:
+       - hello
+       - how are you?
+       - i am good.

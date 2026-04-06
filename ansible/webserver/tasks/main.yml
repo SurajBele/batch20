@@ -16,7 +16,7 @@
     - start-server
 - name: print multipal items
   debug:
-    msg: "{{item}}"
+    msg: {{item}}
   loop:
     - role calling
     - role executed

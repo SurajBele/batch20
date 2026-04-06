@@ -2,7 +2,7 @@
 # tasks file for webserver
 - name: install apache2
   package:
-    name: {{pkg}}
+    name: "{{pkg}}"
     update_cache: yes
     state: present
   when: ansible_os_family == "Debian"

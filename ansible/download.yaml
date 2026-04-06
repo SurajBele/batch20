@@ -1,0 +1,12 @@
+- name: download package
+  hosts: all
+  tasks:
+    - name: download package
+      get_url: 
+       url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.117/bin/apache-tomcat-9.0.117.tar.gz
+       dest: /opt
+    - name: unarchive package
+      unarchive: 
+       src: /opt/apache-tomcat-9.0.117.tar.gz
+       dest: /opt
+       remote_src: yes

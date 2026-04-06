@@ -1,2 +1,7 @@
 ---
 # handlers file for webserver
+- name: start-server
+  systemd: 
+    name: {{pkg}}
+    state: restarted
+    enabled: true

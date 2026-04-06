@@ -1,2 +1,23 @@
 ---
 # tasks file for webserver
+- name: install apache2
+  package:
+    name: {{pkg}}
+    update_cache: yes
+    state: present
+  when: ansible_os_family == "Debian"
+  
+- name: copy index.html from local to webserver
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+    mode: '0644'
+  notify: 
+    - start-server
+- name: print multipal items
+  debug:
+    msg: "{{item}}"
+  loop:
+    - role calling
+    - role executed
+    - work done

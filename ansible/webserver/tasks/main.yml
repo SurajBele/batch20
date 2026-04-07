@@ -14,3 +14,10 @@
     mode: '0644'
   notify: 
     - start-server
+- name: print multipal items
+  debug:
+    msg: "{{item}}"
+  loop:
+    - role calling
+    - role executed
+    - work done

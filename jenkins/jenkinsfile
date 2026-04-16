@@ -17,6 +17,10 @@ pipeline {
         }
         stage('Test') {
             steps {
+               sh '/opt/apache-maven-3.9.14/bin/mvn clean verify sonar:sonar \
+                    -Dsonar.projectKey=myproject \
+                    -Dsonar.host.url=http://43.205.199.5:9000 \
+                    -Dsonar.login=sqp_0ff6a6adfa813b089730bfce5b5f27915f1cfabc'
                 echo " testing successful"
             }
         }

@@ -17,6 +17,7 @@ pipeline {
         }
         stage('Test') {
             steps {
+                timeout(time: 1, unit: 'MIN')
                 withSonarQubeEnv(installationName: 'sonar-server', credentialsId: 'sonar-token') {
                   sh '/opt/apache-maven-3.9.14/bin/mvn sonar:sonar -Dsonar.projectKey=myproject2'
                 }
@@ -32,6 +33,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat-user', path: '', url: 'http://13.201.91.168:8080/')], contextPath: '/', war: '**/*.war'
                 echo "deployment successful"
             }
         }

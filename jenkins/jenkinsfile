@@ -24,7 +24,6 @@ pipeline {
                 echo " testing successful"
             }
         }
-        #hello 
         stage('quality gate') {
             steps {
                 waitForQualityGate abortPipeline: false, credentialsId: 'sonar-token'

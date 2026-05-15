@@ -1,7 +1,7 @@
 replicaCount: 8
 
 image:
-  repository: <ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sample-test
+  repository: 117211782260.dkr.ecr.us-east-1.amazonaws.com/sample-test
   tag: latest
 
 service:

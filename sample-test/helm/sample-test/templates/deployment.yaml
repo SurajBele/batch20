@@ -4,7 +4,7 @@ metadata:
   name: sample-test
 spec:
   replicas: 8
-
+#8 replicas - 3 unavailable = 5 running
   strategy:
     type: RollingUpdate
     rollingUpdate:

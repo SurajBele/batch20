@@ -5,8 +5,8 @@ metadata:
   name: sample-test
 
 spec:
-  type: LoadBalancer
-
+  type: LoadBalancer 
+  #Expose via EKS load balancer
   selector:
     app: sample-test
 

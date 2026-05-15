@@ -1,4 +1,4 @@
-Kubernetes Deployment Exercise — End-to-End DevOps Implementation
+### Kubernetes Deployment Exercise — End-to-End DevOps Implementation
 
 # Required Tools
 1.	AWS EKS → Kubernetes Cluster
@@ -12,6 +12,7 @@ Kubernetes Deployment Exercise — End-to-End DevOps Implementation
 
 
 ====================
+```sh
 Architecture Overview
 Developer
    |
@@ -28,6 +29,7 @@ AWS EKS Cluster
    | Service (LoadBalancer)
    v
 AWS ELB
+```
 =====================
 
 # STEP 1 — Create Simple Application
